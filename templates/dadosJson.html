@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <title>Envio de dados por Json</title>
+</head>
+<body>
+    <h1>Envio de Json com jquery</h1>
+    <form id="form-aluno">
+        <div>
+            <label for="nome-aluno">Nome:</label>
+            <input type="text" name="nome-aluno" id="nome-aluno">
+        </div>
+        <div>
+            <label for="email-aluno">E-mail:</label>
+            <input type="email" name="email-aluno" id="email-aluno">
+        </div>
+        <div>
+            <input type="button" value="enviar" id="envio" name="envio" />
+        </div>
+    </form>
+    <div>
+        <input type="text" id="resp-nome" name="resp-nome" size="50" placeholder="resposta do servidor"/>
+    </div>
+    <div>
+        <input type="text" id="resp-email" name="resp-email" size="50" placeholder="resposta do servidor"/>
+    </div>
+    <script src="{{ url_for('static', filename='enviaJson.js') }}"></script>
+</body>
+</html>
